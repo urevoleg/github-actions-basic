@@ -1,0 +1,16 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Simple-Flask-App
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  my_deploy:
+    runs-on: ubuntu-18.04
+    
+    steps:
+      - name: Hello message
+        run: echo "Hello, world from deploy!"
+
