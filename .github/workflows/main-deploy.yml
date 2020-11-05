@@ -31,5 +31,12 @@ jobs:
       
       - name: Clone git repo
         uses: actions/checkout@v1
+        
+      - name: List working dir after clone
+        run: ls -la
 
+      - name: Check some utils 1
+        run: zip
 
+      - name: Check some utils 2
+        run: python -V; python3 -V
