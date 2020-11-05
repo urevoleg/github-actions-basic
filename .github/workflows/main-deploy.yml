@@ -25,5 +25,8 @@ jobs:
           echo "Comm 2"
           echo "Env 1 value ${{ env.APPLICATION_NAME}}"
           echo "Env 2 value ${{ env.PACKAGE}}"
+          
+      - name: List working dir
+        run: ls -la
 
 
