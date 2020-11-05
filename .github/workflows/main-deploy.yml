@@ -2,8 +2,8 @@
 
 name: Simple-Flask-App
 env:
-  env1: test1
-  env2: test2
+  APPLICATION_NAME: "Simple-Flask-App"
+  PACKAGE         : "flask-app-ver-{{github.sha}}"
 
 on:
   push:
@@ -21,5 +21,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!; echo env1
+      
+      - name: Some executable commands
+        run: |
+          echo "Comm 1"
+          echo "Comm 2"
+          echo "Env 1 value ${{ env.APPLICATION_NAME}}"
+          echo "Env 2 value ${{ env.PACKAGE}}"
 
 
