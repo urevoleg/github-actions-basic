@@ -3,7 +3,7 @@
 name: Simple-Flask-App
 env:
   APPLICATION_NAME: "Simple-Flask-App"
-  PACKAGE         : "flask-app-ver-{{github.sha}}"
+  PACKAGE         : "flask-app-ver-${{github.sha}}"
 
 on:
   push:
